@@ -44,7 +44,7 @@ module DataImporter
           @parameters[:sql] = sql
         end
 
-        opt.on('-c', '--count [COUNT]', String,'count of db records') do |count|
+        opt.on('-c', '--count [COUNT]', String,'count of db records, in MB unit') do |count|
           @parameters[:count] = count
         end
 
@@ -80,7 +80,7 @@ module DataImporter
         runner.run_sql(sql)
       end
 
-      (1..count).each do |cnt|
+      (1..count-1).each do |cnt|
         puts "10M data inserted"
         runner.run_sql("create table hugedb.dbo.hugetable#{cnt} (id int, name text)")
         runner.run_sql("INSERT INTO hugedb.dbo.hugetable#{cnt} (id, name) SELECT id,name FROM hugedb.dbo.hugetable0")
