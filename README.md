@@ -1,7 +1,7 @@
-DBRecordGenerator
-=================
+# DBRecordGenerator
 
-This small program help you generating massive records in SQL server.
+This small program help you generating massive records in SQL
+server. It's based on [DbScriptomate](https://github.com/DeonHeyns/DbScriptomate.rb).
 
 Usage:
 ```bash

@@ -1,10 +1,12 @@
 GEM
-  remote: http://rubygems.org
+  remote: https://ruby.taobao.org/
   specs:
     minitest (5.4.0)
+    tiny_tds (0.7.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   minitest
+  tiny_tds
